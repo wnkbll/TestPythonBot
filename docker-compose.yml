@@ -5,12 +5,12 @@ services:
     expose:
       - 6379
     env_file:
-      - .env
+      - .env-non-dev
     restart: on-failure
   bot:
     build: .
     command: ["/app/docker/bot.sh"]
     env_file:
-      - .env
+      - .env-non-dev
     depends_on:
       - redis
