@@ -1,0 +1,16 @@
+services:
+  redis:
+    image: redis:7
+    command: --port 6379
+    expose:
+      - 6379
+    env_file:
+      - .env
+    restart: on-failure
+  bot:
+    build: .
+    command: ["/app/docker/bot.sh"]
+    env_file:
+      - .env
+    depends_on:
+      - redis

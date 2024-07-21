@@ -32,7 +32,7 @@ async def exchange(
 
     codes = dict_currencies.keys()
 
-    if any((args[0] not in codes, args[1] not in codes)):
+    if any((args[0].upper() not in codes, args[1].upper() not in codes)):
         await message.answer("Неверные параметры.")
         return
 
@@ -42,7 +42,7 @@ async def exchange(
         await message.answer("Неверные параметры.")
         return
 
-    answer = (count * dict_currencies[args[0]]) / dict_currencies[args[1]]
+    answer = (count * dict_currencies[args[0].upper()]) / dict_currencies[args[1].upper()]
 
     await message.answer(f"{args[2]} {args[0]} = {answer} {args[1]}")
 
