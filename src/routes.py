@@ -44,7 +44,7 @@ async def exchange(
 
     answer = (count * dict_currencies[args[0].upper()]) / dict_currencies[args[1].upper()]
 
-    await message.answer(f"{args[2]} {args[0]} = {answer} {args[1]}")
+    await message.answer(f"{args[2]} {args[0].upper()} = {answer} {args[1].upper()}")
 
 
 @router.message(Command("rates"))
