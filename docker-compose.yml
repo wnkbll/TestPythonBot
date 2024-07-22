@@ -9,7 +9,7 @@ services:
     restart: on-failure
   bot:
     build: .
-    command: ["/app/scripts/bot.sh"]
+    command: ["/app/scripts/start.sh"]
     env_file:
       - .env-prod
     depends_on:
