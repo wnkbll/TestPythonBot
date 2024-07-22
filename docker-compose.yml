@@ -9,7 +9,7 @@ services:
     restart: on-failure
   bot:
     build: .
-    command: ["/app/docker/bot.sh"]
+    command: ["/app/scripts/bot.sh"]
     env_file:
       - .env-prod
     depends_on:
