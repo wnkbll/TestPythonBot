@@ -5,6 +5,6 @@
 3) Запустить `docker compose build && docker compose up` 
 
 ### Возможные ошибки: 
-`exec /app/scripts/bot.sh: no such file or directory`:
+`exec /app/scripts/start.sh: no such file or directory`:
 1) Скачать утилиту `dos2unix` (https://dos2unix.sourceforge.io/)
-2) Перейти в папку со скриптом и выполнить `dos2unix bot.sh`
+2) Перейти в папку со скриптом и выполнить `dos2unix start.sh`
